@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "FSMod",
+  "version": "1.1.0",
+  "description": "Modernize Chrome's native file:// directory listing with FSMod.",
+  "permissions": ["storage"],
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "FSMod Info"
+  },
+  "content_scripts": [
+    {
+      "matches": ["file:///*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["icons/*"],
+      "matches": ["file:///*"]
+    }
+  ]
+}
