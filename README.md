@@ -24,6 +24,7 @@ Chrome's default local file directory viewer is functional, but it feels like it
 | Action                  | Shortcut        |
 | ----------------------- | --------------- |
 | **Open File/Folder**    | `Click`         |
+| **Open in New Tab**     | `Ctrl + Click`  |
 | **Preview File**        | `Shift + Click` |
 | **Toggle Preview Lock** | `Shift + P`     |
 

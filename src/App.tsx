@@ -212,6 +212,12 @@ export default function App() {
 
   const handleRowClick = (e: React.MouseEvent, file: FileEntry) => {
     e.preventDefault();
+
+    if (e.ctrlKey || e.metaKey) {
+      window.open(file.url, "_blank");
+      return;
+    }
+
     if (file.kind === "folder") {
       if (e.shiftKey) {
         // Do nothing on shift+click on folder
